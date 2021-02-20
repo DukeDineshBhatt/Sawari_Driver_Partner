@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sawari Driver Partner</string>
+
+    <string name="alarm_notification">Sawari notification</string>
+    <string name="default_notification_channel_id">123</string>
+
+</resources>
