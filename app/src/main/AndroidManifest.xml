@@ -12,11 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".EditBooking">
-
-        </activity>
-
+        <activity android:name=".BookingDetails"></activity>
+        <activity android:name=".EditBooking"></activity>
         <activity
             android:name=".AddBooking"
             android:screenOrientation="portrait" />
@@ -40,9 +37,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".OTP"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".SignUp"
             android:screenOrientation="portrait" />

@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Bookings">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +24,6 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-
                 <ImageView
                     android:id="@+id/media_image"
                     android:layout_width="wrap_content"
@@ -39,35 +37,36 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-
-        <androidx.core.widget.NestedScrollView
+        <LinearLayout
+            android:id="@+id/layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="54dp"
-            android:fillViewport="true">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/main_layout"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cabs"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="42dp">
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"></androidx.recyclerview.widget.RecyclerView>
 
-            </LinearLayout>
 
-
-        </androidx.core.widget.NestedScrollView>
-
+        </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/layout"
+        android:id="@+id/empty_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
         android:gravity="center"
+        android:visibility="gone"
         android:orientation="vertical">
 
         <TextView
@@ -90,8 +89,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:visibility="gone"></ProgressBar>
-
-
     <include
         layout="@layout/element_bottom_navigation"
         android:layout_width="match_parent"
